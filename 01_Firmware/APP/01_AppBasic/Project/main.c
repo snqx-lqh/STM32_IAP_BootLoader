@@ -22,7 +22,7 @@ int main()
 	{
 		printf("HELLO1\r\n");
 		delay_ms(1000);
-		printf("HELLO3\r\n");
+		printf("HELLO2\r\n");
 		delay_ms(1000);
 	}
 }
