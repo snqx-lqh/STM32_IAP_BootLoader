@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103x6</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\User</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\User;..\User\MiniCli</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -521,6 +521,16 @@
               <FileName>flash_if.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\flash_if.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>User/MiniCli</GroupName>
+          <Files>
+            <File>
+              <FileName>MiniCli.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MiniCli\MiniCli.c</FilePath>
             </File>
           </Files>
         </Group>

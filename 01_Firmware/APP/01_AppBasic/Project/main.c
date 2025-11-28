@@ -4,7 +4,7 @@
 #include "bsp_usart.h"
 #include "bsp_sys.h"
 
-#define ApplicationAddress  0x8002000//应用程序地址
+#define ApplicationAddress  0x8003000//应用程序地址
 
 /**
  * @brief 
@@ -20,9 +20,9 @@ int main()
 	delay_init();
 	while(1)
 	{
-		printf("HELLO1\r\n");
+		printf("HELLO1 Test1\r\n");
 		delay_ms(1000);
-		printf("HELLO2\r\n");
+		printf("HELLO3 Test2\r\n");
 		delay_ms(1000);
 	}
 }

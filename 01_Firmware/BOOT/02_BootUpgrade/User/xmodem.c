@@ -13,7 +13,6 @@
 
 extern UART_HandleTypeDef huart1; // 使用 HAL 库的串口句柄
 
-
 static void XM_SendByte(uint8_t data)
 {
     HAL_UART_Transmit(&huart1, &data, 1, 10);
@@ -37,6 +36,15 @@ static uint8_t XM_RecvByte(uint8_t *p, uint32_t timeout_ms)
         if (status == HAL_OK) return 1;
         else return 0;
     }
+}
+
+void UART_FlushHW(UART_HandleTypeDef *huart)
+{
+    while (__HAL_UART_GET_FLAG(huart, UART_FLAG_RXNE) != RESET)
+    {
+        (void)huart->Instance->DR;     
+    }
+    __HAL_UART_CLEAR_PEFLAG(huart);      
 }
 
 int XmodemReceiveData()
@@ -76,6 +84,7 @@ int XmodemReceiveData()
 						goto xmodem_exit;
 						break;
 					case CAN:
+						goto xmodem_exit;
 						break;
 					default:
 						break;
@@ -94,6 +103,7 @@ start_receive:
 		continue;
 	}
 xmodem_exit:
+	UART_FlushHW(&huart1);
 	return 0;
 }
 

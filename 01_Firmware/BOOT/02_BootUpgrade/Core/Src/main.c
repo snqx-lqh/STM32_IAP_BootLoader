@@ -24,6 +24,9 @@
 #include "xmodem.h"
 #include "flash_if.h"
 #include "stdio.h"
+
+#include "MiniCli.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -188,6 +191,8 @@ int main(void)
 			}
 		}
 	}
+	
+	mini_cli_loop();
 	
 	HAL_Delay(100);
 	// Ìø×ªµ½ APP
