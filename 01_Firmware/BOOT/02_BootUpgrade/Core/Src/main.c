@@ -63,8 +63,8 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 /*********************************************************************
 项目使用的单片机是 STM32F103C6T6 他的Flash是32K 也就是 0x800_0000 - 0x800_8000
-我使用 0x0x800_0000 - 0x800_2000 存放 Bootloader
-  使用 0x0x800_2000 - 0x800_8000 存放 App 代码
+我使用 0x0x800_0000 - 0x800_3000 存放 Bootloader
+  使用 0x0x800_3000 - 0x800_8000 存放 App 代码
 
 **********************************************************************/
 
@@ -91,7 +91,7 @@ static uint8_t UART_RecvByte(uint8_t *p, uint32_t timeout_ms)
 // 函数指针重定义
 typedef  void (*pFunction)(void);
 // APP代码的存储地址
-#define ApplicationAddress 0x8002000
+#define ApplicationAddress 0x8003000
 
 pFunction Jump_To_Application;
 uint32_t  JumpAddress;
