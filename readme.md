@@ -8,7 +8,8 @@
 - 支持 **X/Ymdoem** 协议传输下载 。
 - 支持 一个**迷你的命令行**。
 - 视频描述（需注意，视频录完后项目是有更新的，以项目内容为准）：
-  - https://www.bilibili.com/video/BV1T4hvz6E12（视频中使用的 APP 起始地址是0x800_2000，后改成0x800_3000，给boot程序多留了0x1000的空间）
+  - https://www.bilibili.com/video/BV1T4hvz6E12    
+  - （视频中使用的 APP 起始地址是0x800_2000，后改成0x800_3000，给boot程序多留了0x1000的空间）
   - https://www.bilibili.com/video/BV17BS5BtE65
 
 ## 👀项目参考
